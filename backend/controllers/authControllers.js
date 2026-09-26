@@ -43,7 +43,7 @@ export async function signup(req,res){
 
 export async function login(req,res) {
     try{
-        let {name, email, password} = req.body
+        let {email, password} = req.body
 
         if(!email || !password){
             res.status(401).json({success : false , message: "email & password field required !"})
